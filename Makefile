@@ -6,11 +6,11 @@ OBJ = $(SRC:.c=.o)
 all: main
 
 main: lib
-	$(CC) $(CFLAGS) src\main.c -o main -L. -lnaval 
+	$(CC) $(CFLAGS) src\batalhaNaval.c -o batalhaNaval -L. -lnaval 
 
 lib: $(OBJ)
 	ar rcs libnaval.a $(OBJ)
 
 clean:
-	del /f src\*.o *.a main.exe
+	del /f src\*.o *.a batalhaNaval.exe
 
